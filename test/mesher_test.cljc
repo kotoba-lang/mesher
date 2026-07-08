@@ -17,8 +17,8 @@
 
 (deftest namespace-loads
   (testing "the restored CLJC namespaces load"
-    (is (some? (the-ns 'mesher)))
-    (is (some? (the-ns 'mesher.mc-tables)))))
+    (is (some? (find-ns 'mesher)))
+    (is (some? (find-ns 'mesher.mc-tables)))))
 
 ;; --- mod tests -------------------------------------------------------------
 
