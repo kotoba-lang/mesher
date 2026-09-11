@@ -11,10 +11,10 @@ Restored. Ports `kami-mesher/src/lib.rs` (813 lines) and `kami-mesher/src/mc_tab
 `a8368f9c0d784dbc9d11e8fa8f407aa95c7ce4fa` (pre-deletion) — to zero-dependency
 portable `.cljc`:
 
-- `src/mesher/mc_tables.cljc` — the standard Paul Bourke / Lorensen-Cline Marching
+- `src/mesher/mc_tables.cljk` — the standard Paul Bourke / Lorensen-Cline Marching
   Cubes lookup tables (256-entry edge table, 256×16 triangle table, 12-entry
   edge-vertex table), transcribed faithfully as CLJC data.
-- `src/mesher.cljc` — Marching Cubes isosurface mesh generation from a scalar
+- `src/mesher.cljk` — Marching Cubes isosurface mesh generation from a scalar
   density (signed-distance) field (`sdf-to-mesh`, `sdf-to-colored-mesh`,
   `split-mesh-by-color`), plus a dense-voxel-volume face-culling mesher
   (`marching-cubes`, `greedy-mesh-volume` — legacy names kept for API parity).
@@ -28,7 +28,7 @@ reader conditionals where platform math (`Math/sqrt` etc.) is needed.
 5 of the original Rust `#[test]`s were ported 1:1 (+1 smoke test) — 6 tests / 13
 assertions, 0 failures. Two tests were not ported because they depend on external,
 still-Rust crates out of scope for this restoration (`kami_sdf`'s JSON-LD SDF parser,
-and `kami_voxel`'s sparse/octree `VoxelVolume` variants — see `test/mesher_test.cljc`
+and `kami_voxel`'s sparse/octree `VoxelVolume` variants — see `test/mesher_test.cljk`
 docstring for details); only the dense voxel-volume representation is restored here.
 
 Part of the clj-wgsl migration (ADR-2607010930, `com-junkawasaki/root`).
