@@ -36,5 +36,5 @@ Part of the clj-wgsl migration (ADR-2607010930, `com-junkawasaki/root`).
 ## Develop
 
 ```bash
-clojure -M:test
+kbb -M:test
 ```
