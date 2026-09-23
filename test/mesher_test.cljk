@@ -11,7 +11,7 @@
     - `dense_sparse_octree_same_voxels` / `dense_sparse_octree_same_mesh`
       (in `volume_parity_tests`) — depend on `kami_voxel`'s sparse/octree
       `VoxelVolume` variants; only the dense variant is restored here."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [mesher]
             [mesher.mc-tables]))
 
